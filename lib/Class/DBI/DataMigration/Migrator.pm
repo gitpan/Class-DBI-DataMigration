@@ -2,7 +2,7 @@
 
 =head1 Name
 
-Class::DBI::DataMigration::Migrator - 'actor' class that does data migration
+Class::DBI::DataMigration::Migrator - Class that does the actual data migration
 from a source database to a target database.
 
 =head1 Synopsis
@@ -168,6 +168,7 @@ sub _initialize_connection {
     my ($self, $config) = @_;
 
     eval "require $config->{base_class}";
+    carp("Error requiring $config->{base_class}: " . $@) if $@;
 
     $config->{base_class}->set_db(
         'Main',

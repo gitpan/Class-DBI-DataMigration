@@ -2,7 +2,7 @@
 
 =head1 Name
 
-Class::DBI::DataMigration::Mapping - abstract parent class for objects that
+Class::DBI::DataMigration::Mapping - Abstract parent class for objects that
 map a single column in a single row from the source database to the target
 database.
 

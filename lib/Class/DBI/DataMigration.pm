@@ -14,11 +14,18 @@ Class::DBI::DataMigration - Migrate data from one database to another using Clas
 
 =head1 Version
 
-Version 0.01
+Version 0.02
+
+=head1 Description
+
+Class::DBI::DataMigration provides a formalized framework for migrating data
+from one data storage schema to another.  Using an explicit mapping between
+source and target data in YAML format, Class::DBI::DataMigration performs
+migration and synchronization bewtween databases.
 
 =cut
 
-our $VERSION = '0.01';
+our $VERSION = '0.02';
 
 =head1 Caveat
 
@@ -28,7 +35,7 @@ software. You have been warned.
 
 =head1 Todo
 
-Write better overview documentation.
+Write better documentation.
 
 Provide documented examples (for now the tests are a good place to start; hint, hint).
 
@@ -38,7 +45,7 @@ Dan Friedman, C<< <lamech@cpan.org> >>
 
 =head1 Acknowledgements
 
-Thanks to Kirrily "Skud" Robert and Mike Schwern for idea bouncing and
+Thanks to Kirrily "Skud" Robert and Mike Schwern for early idea bouncing and
 encouragement.
 
 Thanks to TransGaming Technologies for supporting the initial development and

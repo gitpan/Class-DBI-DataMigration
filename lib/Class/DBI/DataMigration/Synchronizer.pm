@@ -14,8 +14,8 @@ Class::DBI::DataMigration::Synchronizer
 
 =head1 Description
 
-Class::DBI::DataMigration::Synchronizer - keep records synchronized
-between source and target databases.
+Class::DBI::DataMigration::Synchronizer - Keep records synchronized between
+source and target databases.
 
 =for testing
 use_ok('Class::DBI::DataMigration::Synchronizer');
@@ -34,6 +34,8 @@ use Carp::Assert;
 use Getopt::Long;
 
 __PACKAGE__->mk_classdata('_criteria_args');
+__PACKAGE__->mk_classdata('config_path');
+__PACKAGE__->config_path('./');
 
 sub _initialize {
     my $class = shift;
@@ -46,6 +48,12 @@ __PACKAGE__->_initialize;
 
 
 =head1 Methods
+
+=head2 config_path
+
+Class accessor/mutator for the directory in which our config.yaml can be found.
+This config.yaml will be used to build a C<Class::DBI::DataMigration::Migrator>,
+which we will then use to synchronize the appropriate data. Defaults to './'.
 
 =head2 search_criteria
 
@@ -151,8 +159,7 @@ Collect together all objects from the various CDBI classes matching our
 search_criteria; build a migrator for our class's config.yaml file and
 migrate the objects we've collected.
 
-NB: our config.yaml file is expected to be found in config_path(); see the
-Class::DBI class for details.
+NB: our config.yaml file is expected to be found in config_path(), which defaults to ./.
 
 =cut
 

@@ -2,7 +2,7 @@
 
 =head1 Name
 
-Class::DBI::DataMigration::Mapper - abstract class for mapping a single row in
+Class::DBI::DataMigration::Mapper - Abstract class for mapping a single row in
 the source database to a single row in the target database.
 
 =head1 Synopsis
@@ -85,13 +85,13 @@ map() on each mapping with the source object and the source key under which it
 was stored in the mappings hash. The returned values of each of these map()
 calls are collected into a hash and used to do one of the following:
 
-  - if an object matching our target_search_keys in the data hash is found in
-    the target_cdbi_class (we use the first one found), that object is synchronized
-    using the rest of the data in the data hash and returned; and,
+- if an object matching our target_search_keys in the data hash is found in
+the target_cdbi_class (we use the first one found), that object is synchronized
+using the rest of the data in the data hash and returned; and,
 
-  - if our target_search_keys is empty, or if no object matching the
-    those keys in the data hash exists in the target_cdbi_class, a new target
-    class object is created and returned.
+- if our target_search_keys is empty, or if no object matching the
+those keys in the data hash exists in the target_cdbi_class, a new target
+class object is created and returned.
 
 If errors are encountered during this process, an error message is returned
 instead of the affected object.

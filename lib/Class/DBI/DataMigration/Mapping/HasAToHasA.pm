@@ -2,9 +2,10 @@
 
 =head1 Name
 
-Class::DBI::DataMigration::Mapping - map a single column in a single row that
-represents a has_a relatsionship from the source database to a single column in
-a single row that represents a has_a relationship in the target database.
+Class::DBI::DataMigration::Mapping::HasAToHasA - Map a single column in a
+single row that represents a has_a relatsionship from the source database to a
+single column in a single row that represents a has_a relationship in the
+target database.
 
 =head1 Synopsis
 
@@ -33,6 +34,10 @@ a single row that represents a has_a relationship in the target database.
  # Class::DBI::DataMigration::Migrator for an example of how this would be configured.
 
 =head1 Description
+
+A Class representing the mapping between a single column in a single row that
+represents a has_a relatsionship from the source database to a single column in
+a single row that represents a has_a relationship in the target database.
 
 =cut
 
