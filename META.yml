@@ -1,0 +1,24 @@
+#XXXXXXX This is a prototype!!!  It will change in the future!!! XXXXX#
+name:         Class-DBI-DataMigration
+version:      0.01
+version_from: lib/Class/DBI/DataMigration.pm
+installdirs:  site
+requires:
+    Class::DBI::SQLite:            0.02
+    DBI:                           1.38
+    UNIVERSAL::moniker:            0.06
+    Carp::Assert:                  0.17
+    Class::Accessor:               0.18
+    Class::WhiteHole:              0.04
+    YAML:                          0.35
+    Class::DBI::Test::TempDB:      0
+    Ima::DBI:                      0.31
+    Class::DBI:                    0.94
+    Class::DBI::Loader:            0.01
+    Class::Trigger:                0.08
+    Class::Data::Inheritable:      0.02
+    DBD::SQLite:                   0.28
+    Test::More:                    0
+
+distribution_type: module
+generated_by: ExtUtils::MakeMaker version 1.01
